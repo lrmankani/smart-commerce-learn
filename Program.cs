@@ -25,6 +25,8 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
+app.MapHealthChecks("/health");
+
 app.MapGet("/version",() => new
 {
     Version = "1.0.1",
